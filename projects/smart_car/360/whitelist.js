@@ -1,0 +1,14 @@
+.desktop
+.tablet
+.mobile
+.portrait
+.landscape
+.nexus7
+.desktop.portrait
+.desktop.landscape
+.tablet.portrait
+.tablet.landscape
+.mobile.portrait
+.mobile.landscape
+.nexus7.portrait
+.nexus7.landscape

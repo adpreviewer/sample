@@ -1,0 +1,166 @@
+/* CSS RESET v2.0 | 20110126 License: none (public domain) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+/*
+=====================
+Undertone Elements
+=====================
+*/
+#ut_close {
+  display: none;
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  margin: 0; padding: 0;
+  z-index: 999999;
+
+  text-align: center;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  line-height: 80px;
+  color: #fff;
+
+  cursor: pointer;
+}
+.ut_mobile #ut_close {
+  min-width: 60px; min-height: 60px;
+  line-height: 50px;
+}
+
+body.closed #ut_close { display: none; }
+body.opened #ut_close { display: block; }
+* {
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  filter:inherit; -ms-filter:inherit;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  cursor: pointer;
+}
+
+/*
+=====================
+Common Elements
+=====================
+*/
+#wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+/*
+=====================
+Landscape Message
+=====================
+*/
+.plzrotate,  #msg_landscape { display: none; }
+#msg_landscape {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 99;
+  background: #000;
+}
+#msg_landscape.white {
+  background: #FFF;
+}
+@media screen and (orientation: landscape) {
+  .ut_mobile #msg_landscape { display: block; }
+  .ut_mobile .fpf .plzrotate {
+    display: block;
+    margin: 15px 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center; text-transform: none; color: #fff;
+  }
+  .ut_mobile .fpf.white .plzrotate {
+    color: #000;
+  }
+  .ut_mobile .fpf .plzrotate img {
+    margin-bottom: 20px;
+  }
+  .ut_mobile .closed.fpf .plzrotate { display: none; }
+  .ut_mobile .fpf .spinner {
+    display: block;
+    position: relative;
+    width: 48px; height: 24px;
+    margin: 20px auto 20px;
+    background: #fff;
+    background-size: 48px 48px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-animation: rotating 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    -moz-animation: rotating 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    -ms-animation: rotating 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    -o-animation: rotating 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    animation: rotating 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  .ut_mobile .fpf.white .spinner {
+    background: #000;
+  }
+  .ut_mobile .fpf .dot {
+    position: absolute;
+    bottom: 8px; right: 2px;
+    width: 6px; height: 6px;
+    background: #000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+  }
+  .ut_mobile .fpf.white .dot {
+    background: #fff;
+  }
+  .ut_mobile .fpf .box {
+    position: absolute;
+    bottom: 3px; right: 10px;
+    width: 34px; height: 18px;
+    background: #000;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+  }
+  .ut_mobile .fpf.white .box {
+    background: #fff;
+  }
+}
+@-webkit-keyframes rotating {
+  0%  { -webkit-transform: rotate(0deg);}
+  50% { -webkit-transform: rotate(90deg);}
+  100%{ -webkit-transform: rotate(90deg);}
+}
+@-moz-keyframes rotating {
+  0%  { -moz-transform: rotate(0deg);}
+  50% { -moz-transform: rotate(90deg);}
+  100%{ -moz-transform: rotate(90deg);}
+}
+@-o-keyframes rotating {
+  0%  { -o-transform: rotate(0deg);}
+  50% { -o-transform: rotate(90deg);}
+  100%{ -o-transform: rotate(90deg);}
+}
+@keyframes rotating {
+  0%  { transform: rotate(0deg);}
+  50% { transform: rotate(90deg);}
+  100%{ transform: rotate(90deg);}
+}

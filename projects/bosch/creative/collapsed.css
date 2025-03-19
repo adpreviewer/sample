@@ -1,0 +1,435 @@
+/*Collapsed ClickTag*/
+
+#COLLAPSED_BACKGROUND {
+    /*  display: none;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+}
+/*END Collapsed ClickTag*/
+/*Collapsed*/
+
+#ut_open {
+  right: 160px;
+  color: red;
+}
+
+.EXPAND_ARROW {
+  width: 29%;
+}
+
+#collapse_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  background-image: url(img/col/gradient_bg.png);
+  background-size: cover;
+  background-position: right bottom;
+}
+
+#COLLAPSED_BACKGROUND {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#left_text_container {
+  position: absolute;
+  height: 40%;
+  width: 30%;
+  top: 0;
+  left: 0;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+#left_text_image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: url(img/col/left_text.png) no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+#left_text_cta_container {
+  position: absolute;
+  height: 54px;
+  width: 203px;
+  bottom: 0;
+  left: 0;
+  margin-left: 40px;
+  z-index: 3;
+}
+
+#DISCOVER_CTA {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: url(img/col/discover_cta.png) no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+#mid_product_container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+/*
+#product_center {
+    position: relative;
+    height: 100%; width: 30%;
+    margin-left: 700px;
+}
+*/
+
+#mid_product_image {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  top: 0;
+  right: 20%;
+  background: url(img/col/prod_col_2.png) no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+#right_logo_container {
+  position: absolute;
+  height: 100%;
+  width: 140px;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+}
+
+#right_logo_image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: url(img/col/right_logo.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*Descending Breakpoints*/
+
+@media all and (max-width: 1366px) {
+    /*Desktop Breakpoint*/;
+}
+
+@media all and (max-width: 1200px) {
+    /*Desktop Breakpoint*/
+    
+  #mid_product_image {
+    right: 25%;
+  }
+}
+
+@media all and (max-width: 950px) {
+    /*Desktop Breakpoint*/
+    
+  #mid_product_image {
+    right: 30%;
+  }
+    
+}
+
+@media all and (max-width: 768px) {
+  #left_text_cta_container {
+    width: 181px;
+  }
+/*
+  .mobile.landscape #left_text_cta_container {
+    display: none;
+  }
+*/
+/*
+ .iphone.landscape #ut_close {
+        right: 40px;
+ }
+*/
+  #left_text_container {
+    width: 26%;
+  }
+.tablet #left_text_container {
+    width: 32%;
+}
+.nexus7 #left_text_container {
+    width: 29%;
+}
+}
+
+@media all and (max-width: 740px) and (max-height: 415px) {
+ 
+  .mobile #right_logo_container {
+    width: 90px;
+  }
+
+  .mobile #left_text_cta_container {
+    height: 24px;
+  }
+ 
+}
+
+@media all and (max-width: 730px) {
+    /*Tablet Breakpoint*/
+    
+  #mid_product_image {
+    width: 30%;
+    background-position: bottom center;
+    background-size: contain;
+  }
+
+  #left_text_cta_container {
+    width: 113px;
+  }
+
+  #mid_product_image {
+    right: 36%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #left_text_container {
+    height: 80%;
+     width: 24%;
+      margin-top: 5px;
+  }
+    
+}
+
+@media all and (max-width: 674px) {
+  #left_text_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+/*
+        background: url(img/col/peace_small.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+*/
+  }
+
+  #mid_product_image {
+    right: 42%;
+    width: 20%;
+  }
+
+  #left_text_container {
+    width: 27%;
+    margin-top: 5px;
+  }
+}
+
+@media all and (max-width: 674px) and (max-height: 414px) {
+ 
+  .mobile #left_text_container {
+    width: 12%;
+  }
+
+  .mobile #left_text_cta_container {
+    height: 17px;
+    display: none;
+  }
+}
+@media all and (max-width: 628px) and (max-height: 450px) {
+   .mobile #DISCOVER_CTA { top: 15px; }
+   .mobile #right_logo_container {  width: 80px; }
+   
+        
+}
+@media all and (max-width: 530px) { 
+    .desktop .EXPAND_ARROW {
+        width: 18%;
+    }
+}
+@media all and (max-width: 415px) {
+  #left_text_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(img/col/peace_small.png) no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+    #mid_product_image {
+      position: absolute;
+      width: 38%;
+        right: 27.8%;
+    height: 110%;
+      top: 0;
+      background: url(img/col/prod_col_small.png) no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+    
+#left_text_container {
+    width: 33%;
+}
+
+}
+
+@media all and (max-width: 415px) {
+    /*Mobile Breakpoint*/
+    
+  #ut_open {
+    right: 90px;
+  }
+
+  #left_text_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(img/col/peace_small.png) no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  #left_text_cta_container {
+    bottom: -20px;
+    margin-left: 20px;
+    display: none;
+  }
+
+  #left_text_container {
+    margin-left: 8px;
+    height: 66%;
+    top: 0px;
+  }
+
+  #DISCOVER_CTA {
+    height: 60%;
+    display: none;
+  }
+
+  #left_bar {
+    position: absolute;
+    left: -15px;
+  }
+
+  #right_logo_image {
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    right: 0;
+    background: url(img/col/right_logo.png) no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+
+  #right_logo_container {
+    margin-right: 12px;
+  }
+
+  #mid_product_image {
+    background-size: contain;
+    background-position: bottom center;
+    width: 38%;
+    right: 28%;
+  }
+
+  #left_text_container {
+    margin-left: 13px;
+    height: 84%;
+    top: 0px;
+  }
+
+  #left_text_cta_container {
+    bottom: -18px;
+    margin-left: 13px;
+    width: 88px;
+  }
+}
+@media all and (max-width: 375px) {
+    #left_text_container {
+        margin-left: 15px;
+    height: 80%;
+    top: 0px;
+        width: 28%;
+    }
+    #mid_product_image {
+            width: 38%;
+    right: 31%;
+    height: 101%;
+    }
+    
+}
+@media all and (max-width: 365px) {
+  #ut_open {
+    right: 85px;
+  }
+
+  #mid_product_image {
+    right: 33%;
+  }
+}
+
+@media all and (max-width: 358px) {
+  #mid_product_image {
+    right: 31%;
+  }
+    #left_text_container {
+           width: 28%;
+    }
+}
+
+@media all and (max-width: 320px) {
+  #left_text_image {
+    width: 79%;
+    left: 5px;
+  }
+
+  #DISCOVER_CTA {
+    background-size: contain;
+    height: 35%;
+    top: 0px;
+    left: 5px;
+  }
+
+  #left_text_cta_container {
+    margin-left: 10px;
+  }
+
+    #mid_product_image {
+        right: 37.7%;
+        width: 29%;
+            height: 94%;
+        background-position: top center;
+    }
+  #ut_open {
+    right: 85px;
+    top: 5px;
+  }
+  #left_text_container {
+    width: 34%; margin-left: 10px;
+
+  }
+    .EXPAND_ARROW {
+    width: 26%;
+    }
+}

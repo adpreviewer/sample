@@ -1,0 +1,701 @@
+/*Background ClickTag*/
+*{
+    cursor: pointer;
+}
+#BACKGROUND {
+/*  display: none;*/
+  position: absolute;
+  top: 0; left: 0;
+
+  width: 100%; height: 100%;
+
+  cursor: pointer;
+  background-color: transparent;
+}
+#ut_close {
+    position: absolute;
+    right: 180px;
+    width: 21px;
+    height: 21px;
+    top: -14px;
+}
+#expanded {
+    position: absolute;
+    width: 100%; height: 500px; top: 0; left: 0;
+    background-color: white;
+    overflow: hidden;
+}
+/*================BACKGROUNDS==============*/
+#EXPANDED_BACKGROUND{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: green;
+    opacity: 0;
+}
+
+
+#bg_bottombar {
+     position: absolute;
+     height: 158px; width: 100%; bottom: 0;
+     background: url(img/exp/bg_pattern.jpeg); background-size: contain; 
+}
+#top_gradient {
+    position: absolute;
+    height: 343px;  width: 100%; top 0; right: 0;
+    background: url(img/exp/gradient_top.png); background-size: cover; background-position: right;
+}
+#LEFT_COLOR_BAR {
+    position: absolute;
+    height: 500px; width:23px; left: 0; top: 0;
+    background: url(img/exp/left_bar.png); background-size: contain;
+    z-index: 6;
+}
+
+/*================LEFT PANEL==============*/
+
+#left_container {
+    position: absolute;
+    top: 0; left: 23px; right: 70%; bottom: 0;
+    display: block;
+}
+#left_top_text {
+    position: absolute;
+    top: 0; left: 0; right: 0%; bottom: 60%;
+}
+#left_trophy_text {
+    position: absolute;
+    height: 250px; width: 531px;  margin-left: 10px;
+    background: url(img/exp/left_details_2.png) no-repeat;
+    background-size: contain; background-position: top left;
+}
+#button_container {
+    position: absolute;
+    top: 56%; left: 0; right: 0; bottom: 0;
+}
+#DISCOVER_RESULTS {
+    position: absolute;
+    height: 28px; width: 268px;  margin-left: 35px;
+    background: url(img/exp/button_cta.png) no-repeat;
+    background-size: contain;  background-position: top left;
+    z-index: 2;
+}
+
+#bottom_disclaimer {
+    position: absolute;
+    height: 10px; width: 25%; bottom: 10px; left: 40px;
+    background: url(img/exp/bottom_disclaimer.png) no-repeat; background-size: contain;
+}
+#FIND_A_STOCKLIST {
+    position: absolute;
+    height: 70px; width: 140px; bottom: 10px; left: 0px;
+    background: url(img/exp/find_stock.png) no-repeat; background-size: contain;
+    background-position: bottom left;
+    display: block;
+    z-index: 2;
+}
+/*MID AREA==============================================
+============================================*/
+
+#mid_container {
+    position: absolute;
+    top: 0; left: 30%; right: 13%; bottom: 0;
+    display: block;
+}
+#product_1 {
+    position: absolute;
+    background: url(img/exp/product_left_02.png) no-repeat;
+    background-size: contain;
+    
+}
+#product_2 {
+    position: absolute;
+    background: url(img/exp/product_mid_02.png) no-repeat;
+    background-size: contain;
+    margin-left: 200px;
+    transform-origin: center center;
+}
+#product_3 {
+    position: absolute; 
+    background: url(img/exp/product_right_02.png) no-repeat;
+    background-size: contain;
+    margin-left: 460px;
+    transform-origin: left;
+}
+.product_size {
+    height: 100%; width: 500px;  bottom: 0; 
+}
+#SERIE_4 {
+    position: absolute;
+    background: url(img/exp/product_description_1.png) no-repeat;
+    background-size: contain;
+    height: 54px; width: 151px; bottom: 50px;
+    z-index: 0;
+}
+#SERIE_8 {
+    position: absolute;
+    background: url(img/exp/product_decription_2.png) no-repeat;
+    background-size: contain;
+    height: 33px; width: 263px; bottom: 30px; margin-left: 210px;
+    z-index: 0;
+}
+#SERIE_6 {
+    position: absolute;
+    background: url(img/exp/product_description_3.png) no-repeat;
+    background-size: contain;
+    height: 52px; width: 177px; bottom: 40px;  margin-left: 560px;
+    z-index: 0;
+}
+/*MID AREA - END==============================================
+START SIDE BAR===========================*/
+#right_container {
+   position: absolute;
+   width: 140px; height: 100%; right: 30px;
+    -webkit-transform: translateY(0%); transform: translateY(0%);
+   
+    z-index: 6;
+}
+
+#side_bar_bg {
+    position: absolute;
+    width: 140px; height: 100%; opacity: .5;
+    background: white;
+    
+}
+#EXP_BOSCH_LOGO {
+    position: absolute;
+    height: 89px; width: 140px; top 0; right: 30px;
+    background: url(img/exp/exp_logo.png) no-repeat;
+    background-size: contain; background-position: top right;
+    z-index: 6;
+}
+#CONTROLS_CONTAINER {
+    position: absolute; 
+    top: 89px; height: 411px; width: 140px;
+    overflow: hidden
+}
+#DISCOVER_ACTIVE_OXY {
+    position: relative; display: inline-block;
+    width: 140px; height: 130px;
+    background: url(img/exp/discover_active.png) no-repeat;  background-size: contain;
+}
+
+#DISCOVER_IDOS {
+    position: relative; display: inline-block;
+    width: 140px; height: 130px;
+    background: url(img/exp/discover_idos.png) no-repeat; background-size: contain;
+}
+
+#DISCOVER_VARIO {
+    position: relative; display: inline-block;
+    width: 140px;  height: 130px;
+    background: url(img/exp/discover_vario.png) no-repeat; background-size: contain; 
+}
+
+/*END SIDE BAR==============================================
+START END FRAMES==============*/
+#end_frame_cover {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    opacity: 0;
+    z-index: -1;
+}
+.bg_bottombar {
+     position: absolute;
+     height: 158px; width: 100%; bottom: 0;
+     background: url(img/exp/bg_pattern.jpeg); background-size: contain; 
+}
+.top_gradient {
+    position: absolute;
+    height: 343px;  width: 100%; top 0; right: 0;
+    background: url(img/exp/gradient_top.png); background-size: cover; background-position: right;
+}
+#end_left_container {
+    position: absolute;
+    height: 100%; width: 300px;
+    display: block;
+}
+#left_prod_1 {
+    position: absolute;
+    background: url(img/exp/product_left_02.png) bottom center / contain no-repeat;
+    width: 100%; height: 690px; margin-left: 50px; bottom: -100px;
+    display: block;
+    opacity: 0;
+        
+}
+#left_prod_2 {
+    position: absolute;
+    background: url(img/exp/product_mid_02.png) bottom center / contain no-repeat;
+    width: 100%; height: 450px; margin-left: 80px;
+    opacity: 1;
+    display: block;
+}
+#left_prod_3 {
+    position: absolute;
+    background: url(img/exp/product_right_02.png) bottom center / contain no-repeat;
+    width: 100%; height: 540px; margin-left: 60px; bottom: 0px;
+    display: block;
+    opacity: 0;
+}
+/*END FRAME VIDEOS==================================*/
+#end_mid_video_content {
+    position: absolute;
+    top: 0; left: 30%; right: 13%; bottom: 0;
+    display: block;
+}
+#video_container {
+  position: absolute;
+  top: 50px; left: 0;
+  width: 740px; height: 380px;
+  overflow: hidden;
+}
+#video_container_2 {
+  position: absolute;
+  top: 50px; left: 0;
+  width: 740px; height: 380px;
+  overflow: hidden;
+}
+#video_container_3 {
+  position: absolute;
+  top: 50px; left: 0;
+  width: 740px; height: 380px;
+  overflow: hidden;
+}
+#VIDEO_TRANSPARENTBUTTON {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+/*    background: green;*/
+    z-index: 5;
+}
+#VIDEO_PLAYER {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('img/exp/activ_placeholder_with_play.jpg') center center / cover no-repeat;
+  z-index: 2;
+}
+#VIDEO_PLAYER_2 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('img/exp/idos_placeholder_with_play.jpg') center center / cover no-repeat;
+  z-index: 2;
+}
+#VIDEO_PLAYER_3 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('img/exp/vario_placeholder_with_play.jpg') center center / cover no-repeat;
+  z-index: 2;
+}
+#end_top_details {
+    position: absolute; margin: auto;
+    height: 50px; width: 740px;
+    top:5px; left: 0;
+}
+#end_top_details_1 {
+    position: absolute; margin: auto;
+    height: 50px; width: 740px;
+    top:0; left: 0;
+    background: url(img/exp/active_oxy_end_details.png) center center / contain no-repeat;
+    opacity: 1;
+}
+#end_top_details_2 {
+    position: absolute; margin: auto;
+    height: 50px; width: 740px;
+    top:0; left: 0;
+    background: url(img/exp/end_idos_top.png) center center / contain no-repeat;
+    opacity: 0;
+}
+#end_top_details_3 {
+    position: absolute; margin: auto;
+    height: 50px; width: 740px;
+    top:0; left: 0;
+    background: url(img/exp/vario_perfect_end_details.png) center center / contain no-repeat;
+    opacity: 0;
+}
+/*-------------*/
+#end_bottom_cta {
+    position: absolute;
+    height: 27px; width: 740px;
+    bottom:30px; left: 0;
+    margin: auto;
+}
+#DISCOVER_CTA_IDOS {
+    position: absolute; margin: auto;
+    height: 27px; width: 272px;
+    bottom:0; right: 0;
+    background: url(img/exp/idos_button.png) top right / contain no-repeat;
+    opacity: 0;
+    z-index: 2;
+}
+#DISCOVER_CTA_OXY {
+    position: absolute; margin: auto;
+    height: 27px; width: 272px;
+    bottom:0; right: 0;
+    background: url(img/exp/active_oxy_button.png) top right / contain no-repeat;
+    opacity: 0;
+    z-index: 2;
+}
+#DISCOVER_CTA_VARIO {
+    position: absolute; margin: auto;
+    height: 27px;    width: 272px;
+    bottom:0; right: 0;
+    background: url(img/exp/vario_perfect_cta.png) top right / contain no-repeat;
+    opacity: 0;
+    z-index: 2;
+}
+.end_top {
+    position: absolute;
+    height: 50px; width: 740px;
+    top:0; left: 0;
+    margin: auto;
+}
+/*END Background ClickTag*/
+
+/*Descending Breakpoints*/
+@media all and (max-width: 1450px) { /*Desktop Breakpoint*/
+    .product_size { height: 90%; }
+    #product_2 { margin-left: 170px; }
+    #product_3 { margin-left: 390px; }
+    #SERIE_4 { width: 110px; }
+    #SERIE_8 { margin-left: 173px; width: 247px; }
+    #SERIE_6 { margin-left: 498px; width: 137px; }
+    
+    #video_container { width: 640px;  } #video_container_2 { width: 640px;  } #video_container_3 { width: 640px;  }
+    #end_top_details_1 { width: 640px; }  #end_top_details_2 { width: 640px; } #end_top_details_3 { width: 640px; }
+    #end_bottom_cta { width: 640px; }
+}
+@media all and (max-width: 1200px) { /*Desktop Breakpoint*/
+    #left_trophy_text { height: 200px; }
+    #DISCOVER_RESULTS { width: 206px; }
+    #mid_container { left: 25%; }
+    #button_container { top: 46%; }  
+    
+    #video_container { width: 500px; height: 281px; top: 100px; } #video_container_2 { width: 500px; height: 281px; top: 100px; } #video_container_3 { width: 500px; height: 281px; top: 100px; }
+    #end_top_details_1 { width: 500px; top: 50px;}  #end_top_details_2 { width: 500px; top: 50px;} #end_top_details_3 { width: 500px; top: 50px;}
+    #end_bottom_cta { width: 500px; bottom: 80px; }
+    #end_mid_video_content { left: 36%; }
+    
+}
+@media all and (max-width: 1150px) {
+    #mid_container { left: 30%; }
+    .product_size { height: 70%; }
+    #product_2 { margin-left: 130px; }
+    #product_3 { margin-left: 295px; }
+    #SERIE_4 { width: 100px; bottom: 30px; }
+    #SERIE_8 { margin-left: 133px; width: 193px; bottom: 12px; }
+    #SERIE_6 {   margin-left: 366px; width: 117px; bottom: 17px; }
+    #button_container { top: 46%; }  
+    
+    #end_mid_video_content { left: 29%; }
+    #end_left_container {  width: 220px; }
+    #left_prod_1 { bottom: -20px; margin-left: 74px;}
+    #left_prod_3 { bottom: 50px; }
+    
+}
+
+@media all and (max-width: 1024px) { /*Desktop Breakpoint*/
+    #left_trophy_text { height: 160px; }
+    #button_container { top: 36%; }
+    #DISCOVER_RESULTS { width: 166px; }
+    #mid_container { left: 24%; }
+    
+    #video_container { width: 420px; height: 237px; top: 150px; } #video_container_2 { width: 420px; height: 237px; top: 150px; }
+    #video_container_3 { width: 420px; height: 237px; top: 150px; }
+    #end_top_details_1 { width: 419px;  top: 110px; }  #end_top_details_2 { width: 419px;  top: 110px; }  #end_top_details_3 { width: 419px;  top: 110px; }
+    #end_bottom_cta { width: 417px; bottom: 80px; }
+    #end_left_container {  width: 225px; left: -40px; }
+    #end_mid_video_content { left: 31%; }
+    
+    .nexus7.landscape #DISCOVER_ACTIVE_OXY {
+        background-position: center;
+        height: 100px;
+    }
+
+    .nexus7.landscape #DISCOVER_IDOS {
+        background-position: center;
+        height: 100px;
+    }
+    .nexus7.landscape #DISCOVER_VARIO {
+        background-position: center;
+        height: 100px;
+    }
+    .nexus7.landscape #end_frame_cover {
+  
+    top: -60px;
+    }
+    .nexus7.landscape #mid_container { bottom: 70px; }
+    .nexus7.landscape #bottom_disclaimer { bottom: 70px; }
+    .nexus7.landscape #SERIE_4 { bottom: 20px; }
+    .nexus7.landscape #SERIE_8 {  bottom: 7px; }
+    .nexus7.landscape #SERIE_6 {
+    margin-left: 359px;
+    width: 97px;
+    bottom: 7px;
+    }
+  
+}
+@media all and (max-width: 930px) {
+    #mid_container { left: 18%; }
+    #end_mid_video_content {   left: 26%; }
+}
+
+@media all and (max-width: 830px) {
+    #left_trophy_text { 
+      background: url(img/exp_med/left_trophy_text.png) no-repeat; background-size: contain; 
+      top: 15px; height: 110px;
+    }
+    #left_top_text { left: 23px; }
+    #button_container { top: 30%; }
+    #mid_container { left: 13%; }
+     #mid_container { bottom: 5%; }
+    .product_size { height: 60%; }
+    #product_2 { margin-left: 110px; }
+    #product_3 { margin-left: 255px; } 
+    #SERIE_4 {  width: 80px; bottom: 13px; }
+    #SERIE_8 { margin-left: 113px; width: 161px; bottom: 2px; }
+    #SERIE_6 {  margin-left: 318px;  width: 94px; bottom: 2px; }
+    
+    #end_mid_video_content {   left: 16%; }
+}
+@media all and (max-width: 768px) {
+    #end_mid_video_content {   left: 13%; }
+    #end_left_container { display: none; }
+    #FIND_A_STOCKLIST { display: block; }
+    
+/*
+    .mobile.landscape #left_text_cta_container { width: 123px; bottom: -6px; }
+    .mobile.landscape #right_logo_container { height: 100%; width: 80px; }
+    .mobile.landscape #ut_open {  right: 120px;  }
+    .mobile.landscape #ut_close { right: 30px; }
+*/
+    
+}
+@media all and (max-width: 740px) and (max-height: 415px) { 
+    .mobile #ut_close { right: 80px; }
+}
+
+@media all and (max-width: 730px) { 
+     .product_size { height: 40%; }
+    #mid_container { bottom: 17%; left: 22%; }
+    #product_2 { margin-left: 70px; }
+    #product_3 { margin-left: 154px; }
+    #SERIE_4 {  width: 60px; bottom: -17px; }
+    #SERIE_8 {  margin-left: 73px;  width: 103px; bottom: -13px; }
+    #SERIE_6 { margin-left: 188px;  width: 54px;  bottom: -22px; }
+    #left_trophy_text { top: 23px; height: 78px; margin-left: -1px; }
+    #button_container { top: 24%; }
+    #DISCOVER_RESULTS { margin-left: 21px; width: 216px; }
+    
+    #end_mid_video_content { left: 9%; }
+     #video_container { width: 360px;  }  #video_container_2 { width: 360px;  }  #video_container_3 { width: 360px;  }
+    #end_top_details_1 { width: 360px; }  #end_top_details_2 { width: 360px; }  #end_top_details_3 { width: 360px; }
+    #end_bottom_cta { width: 360px; }
+
+}
+
+
+@media all and (max-width: 590px) {  /*Mobile Breakpoint*/
+  
+/*
+    .mobile.landscape #ut_open {
+        right: 103px;
+    }
+*/
+ 
+    
+    
+    #left_trophy_text {
+     background: url(img/exp_small/small_text_trophy_1.png) no-repeat;
+     background-size: contain;
+     top: 95px;
+     height: 68px;
+     width: 552px;
+     position: absolute;
+     margin-left: 84px;
+    } 
+    #left_top_text { left: 0; }
+    #left_container { position: absolute; top: 0; left: 13%; right: 0; bottom: 0;  display: block; }
+    #button_container { top: 34%; }
+    #DISCOVER_RESULTS { margin-left: 110px; }
+    
+    #right_container {
+        right: auto;
+        left: 26px;
+        width: auto;
+         -webkit-transform: translateY(-100%); transform: translateY(-100%);
+        
+        
+    }
+    #DISCOVER_ACTIVE_OXY {height: 80px;}
+    #DISCOVER_IDOS {height: 80px;}
+    #DISCOVER_VARIO {height: 80px;}
+    #side_bar_bg { width: 90px; height: 300px; opacity: 1; }
+    #CONTROLS_CONTAINER { top: 39px; height: 300px; }  
+    #menu_button {
+        position: absolute;
+        height: 25px; width: 50px;
+        top: 15px; left: 30px;
+        background: url(img/exp_small/button_menu.png) no-repeat;
+        background-size: contain;
+        z-index: 6;
+    }
+ 
+    #button_container { top: 40%;  }
+    #DISCOVER_RESULTS { margin-left: 60px; }
+   
+    
+    #end_mid_video_content { left: 21%; top: -40px;}
+    .desktop #left_trophy_text { margin-left: 58px; }
+    .desktop #end_mid_video_content { left: 11%; }
+   
+
+}
+
+
+@media all and (max-width: 415px) { /*Mobile Breakpoint - Iphone6 plus*/
+    .desktop .product_size {  height: 53%; }
+    .desktop #left_container { left: -8%; }
+    .desktop #left_trophy_text {  top: 65px;  margin-left: 88px;   height: 92px; }
+    .desktop #DISCOVER_RESULTS { margin-left: 90px; width: 294px; height: 40px; }
+    .desktop #end_mid_video_content { top: -65px; }
+    .desktop #end_bottom_cta { margin-top: 370px; }
+    .desktop #mid_product_image { width: 23%; right: 39%; }
+   
+    
+    
+
+    
+    #LEFT_COLOR_BAR { height: 100%; left: -14px; }
+    #menu_button { left: 20px; }
+    .top_gradient { height: 100%; background: url(img/exp_med/gradient_top.png); }
+    #top_gradient { height: 100%; background: url(img/exp_med/gradient_top.png); }
+    #end_mid_video_content { left: 6%; top: -10px;}
+    #mid_container {left:  8%; bottom: 12%;}
+    #ut_close { right: 110px}
+    #left_trophy_text { top: 85px; margin-left: 58px; height: 112px; }
+    #button_container { top: 34%;  }
+    #DISCOVER_RESULTS { margin-left: 60px; width: 364px; height: 40px; }
+    #left_container { left: -8%; }
+    #EXP_BOSCH_LOGO { height: 59px; right: 10px;  }
+    #right_container { right: 20px; left: 9px; }
+    #ut_close img { right: 120px; }  
+    
+    #video_container { width: 372px; height: 211.50px; } #video_container_2 { width: 372px; height: 211.50px; } #video_container_3 { width: 372px; height: 211.50px; }
+    
+    #end_top_details_1 {  width: 371px; height: 50px; }  #end_top_details_2 {  width: 371px; height: 50px; } #end_top_details_3 { width: 371px; height: 50px; }
+    #end_bottom_cta {  width: 372px; height: 39.4px; bottom: auto; position: relative; margin-top: 119%; }
+   
+    #DISCOVER_CTA_IDOS {
+    background: url(img/exp_small/video_cta_1.png) top right / contain no-repeat; 
+    height: 41.4px; width: 372px;
+    }
+    #DISCOVER_CTA_OXY {
+    background: url(img/exp_small/discover_activ_cta_small.png) top right / contain no-repeat; 
+    height: 41.4px; width: 372px;
+    }
+    #DISCOVER_CTA_VARIO {
+    background: url(img/exp_small/vario_perfect_cta_small.png) top right / contain no-repeat; 
+    height: 41.4px; width: 372px;
+    }
+    
+    .product_size {  height: 47%; }
+    #product_2 { margin-left: 100px; }
+    #product_3 { margin-left: 224px; }
+    
+   #FIND_A_STOCKLIST {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    left: 0;
+    background-position: center;
+   }
+    #SERIE_4 {
+    background: url(img/exp_small/product_description_1.png) no-repeat;
+    background-size: contain;     width: 70px; bottom: 5px;
+    }
+    #SERIE_8 {
+     position: absolute;
+     background: url(img/exp_small/product_description_2.png) no-repeat;
+     background-size: contain;
+     margin-left: 113px;
+     width: 143px;
+     bottom: -13px;
+     height: 40px;
+    }
+    #SERIE_6 {
+    position: absolute;
+    background: url(img/exp_small/product_description_3.png) no-repeat;
+    background-size: contain;
+    margin-left: 287px; width: 74px; bottom: -8px;
+    }
+
+}
+    
+@media all and (max-width: 375px) { /*Mobile Breakpoint - Iphone6*/
+   #mid_container { left: 7%; bottom: 15%; }
+   #left_container { left: -11%; }
+   #left_trophy_text { height: 99px; }
+   #button_container { top: 35%; }
+   #DISCOVER_RESULTS { width: 316px; }
+  
+   .product_size { height: 43%; }
+   #product_3 {margin-left: 199px; }
+   #product_2 {  margin-left: 86px; }
+   #SERIE_4 { width: 70px; bottom: -4px;}
+   #SERIE_8 {  margin-left: 100px; }
+   #SERIE_6 {  margin-left: 248px; width: 62px; bottom: -12px; }
+   #end_mid_video_content {  left: 5%; top: -50px;   }
+   #video_container {  width: 332px;  height: 190.5px; } #video_container_2 {  width: 332px;  height: 190.5px; } #video_container_3 {  width: 332px;  height: 190.5px; }
+    
+    #end_bottom_cta { width: 327px; margin-top: 124%; }
+    #DISCOVER_CTA_OXY {width: 327px; } 
+    #DISCOVER_CTA_IDOS { width: 327px;} 
+    #DISCOVER_CTA_VARIO { width: 327px;} 
+    #end_top_details_1 {  width: 329px; }
+    #end_top_details_2 {  width: 329px; }
+    #end_top_details_3 {  width: 329px; }
+   
+    
+
+    
+   
+   
+
+}
+@media all and (max-width: 357px) {
+/*   #end_bottom_cta {  width: 270px;  bottom: auto; position: relative; margin-top: 132%; }*/
+}
+@media all and (max-width: 320px) { 
+   #left_container { left: -8%; }
+   #left_trophy_text {  height: 81px; top: 67px; margin-left: 63px; }
+   #DISCOVER_RESULTS { width: 259px; width: 259px; }
+   #mid_container { left: 13%;     bottom: 18%; }
+   #product_3 {margin-left: 156px; }
+   #product_2 {  margin-left: 69px; }
+   .product_size {  height: 46%; }
+    #end_mid_video_content { left: 11%; top: -60px; }
+    .top_gradient { height: 100%; }
+    #top_gradient { height: 100%; }
+    #LEFT_COLOR_BAR { height: 100%; }
+    #end_bottom_cta {  bottom: auto; position: relative; margin-top: 132%; }
+    #SERIE_4 { width: 60px;  bottom: -14px; }
+   #SERIE_8 { margin-left: 75px; bottom: -13px;height: 30px; }
+   #SERIE_6 { margin-left: 200px; height: 33px;  bottom: -5px; }
+   #end_mid_video_content {      left: 6%; top: -72px;  }
+   #video_container {  width: 294px;  height: 163.5px; } #video_container_2 {  width: 294px;  height: 163.5px; } #video_container_3 {  width: 294px;  height: 163.5px; }
+    
+    #end_bottom_cta { width: 327px; margin-top: 126%; }
+    #DISCOVER_CTA_OXY {width: 291px; background-position: left bottom; right: auto;   left: 0; }
+    #DISCOVER_CTA_IDOS {width: 291px; background-position: left bottom; right: auto;   left: 0; }
+    #DISCOVER_CTA_VARIO {width: 291px; background-position: left bottom; right: auto;   left: 0; }
+      #end_top_details_1 {  width: 292px; }
+    #end_top_details_2 {  width: 292px; }
+    #end_top_details_3 {  width: 292px; }
+   
+}

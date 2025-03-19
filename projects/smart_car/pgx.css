@@ -1,0 +1,635 @@
+* {
+    cursor: pointer;
+}
+
+/*Full Background*/
+.grey_bg {
+    background: grey;
+    opacity: .8;
+    display: none;
+}
+
+#BACKGROUND_CLICK_CT1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: gray;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+#FIND_OUT_CT2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: gray;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.absolute_100 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_container {
+    background: url(background.jpg) no-repeat center center / cover;
+    border: 8px solid white;
+    box-sizing: border-box;
+}
+
+.guide {
+    /* background: url(video_guide.jpg) no-repeat center center / cover;*/
+    opacity: 0;
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bottom_left_disclaimer {
+    position: absolute;
+    height: 5%;
+    width: 11%;
+    bottom: 1%;
+    left: 2%;
+    background: url(bottom_left_disclaimer.png) no-repeat bottom left /contain;
+}
+
+.logo_top {
+    position: absolute;
+    height: 15%;
+    width: 135px;
+    top: 0;
+    right: 50px;
+    background: url(smart_logo.png) no-repeat top right/ contain;
+}
+
+.close_btn {
+    position: absolute;
+    height: 12%;
+    width: 80px;
+    top: 0;
+    left: 0px;
+    background: url(close_btn.png) no-repeat left top / contain;
+    z-index: 3;
+}
+
+
+.content_parent {
+    position: absolute;
+    /*    border: 5px solid white;*/
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 62.6%;
+    width: 81%;
+
+}
+
+.car_resizer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    opacity: 1;
+}
+
+.car_360_parent {
+    position: absolute;
+    border: 5px solid white;
+    box-sizing: border-box;
+    height: 94%;
+    width: 60%;
+    left: 15px;
+    bottom: 0;
+    background: url(bg_360.jpg) no-repeat center center / cover;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.car_360_parent img {
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+#CAR_360_PARENT_DRAG {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: green;
+    opacity: 0;
+}
+
+.top_right_text_360 {
+    position: absolute;
+    height: 5%;
+    width: 30%;
+    background: url(top_right_text_360.png) no-repeat top right / contain;
+    top: 5px;
+    right: 5px;
+}
+
+.copy_parent {
+    position: absolute;
+    height: 20%;
+    width: 34%;
+    left: 64%;
+    bottom: 76%;
+}
+
+.rotate_image {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    background: url(arrows_360.png) no-repeat bottom center / contain;
+}
+
+.rotate_message {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    background-image: url(rotate_message.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 40%;
+}
+
+.copy_1 {
+    position: absolute;
+    height: 38%;
+    width: 100%;
+    background-image: url(copy_1.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+
+.copy_2 {
+    position: absolute;
+    height: 38%;
+    width: 100%;
+    top: 43%;
+    background-image: url(copy_2.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+
+.find_out_cta {
+    position: absolute;
+    top: 90%;
+    height: 35%;
+    width: 56%;
+    background-image: url(find_out_cta.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    z-index: 2;
+}
+
+.video_thumb_parent {
+    position: absolute;
+    height: 50%;
+    width: 34%;
+    left: 64%;
+    bottom: 0;
+    border: 5px solid white;
+    box-sizing: border-box;
+    background: url(video_thumb.jpg) center center / cover;
+    z-index: 1;
+}
+
+.video_overlay_parent {
+    display: none;
+}
+
+.video_container_parent {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 555px;
+    width: 1320px;
+    border: 4px solid white;
+    box-sizing: border-box;
+}
+
+.video_dark_bg {
+    background: black;
+    opacity: .85;
+}
+
+.video_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: grey z-index: 4;
+}
+
+.video_close {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    background-image: url(close_video.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    background-size: 35%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+
+@media all and (max-width: 1650px) {
+    .video_container_parent {
+        height: 555px;
+        width: 1320px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .video_container_parent {
+        height: 466px;
+        width: 1110px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .video_container_parent {
+        height: 392px;
+        width: 930px;
+    }
+}
+
+
+
+@media all and (max-width: 1024px) {
+    .content_parent {
+        height: 43.6%;
+    }
+    .video_container_parent {
+        height: 397px;
+        width: 930px;
+    }
+}
+
+@media all and (max-width: 768px) and (min-height: 490px) {
+    .content_parent {
+        height: 75%;
+        width: 100%;
+        top: 0%;
+        left: 0;
+    }
+
+    .car_360_parent {
+        height: 58%;
+        width: 95%;
+        top: 0;
+        left: 2.5%;
+    }
+    .bottom_left_disclaimer {
+        width: 20%;
+    }
+
+    .video_thumb_parent {
+        height: 58%;
+        width: 95%;
+        top: 0;
+        left: 2.5%;
+        bottom: auto;
+    }
+    .video_overlay_parent {
+        display: none;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .video_container_parent {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 304px;
+        width: 710px;
+    }
+
+    .video_close {
+        display: none;
+    }
+    .option_2_nav_parent {
+        position: absolute;
+        top: 59%;
+        left: 2%;
+        bottom: auto;
+        height: 61px;
+        width: 380px;
+        z-index: 2;
+    }
+
+    .btn_360_parent {
+        height: 100%;
+        width: 44%;
+        top: 0;
+        left: 0;
+        bottom: auto;
+    }
+    .btn_360_hit {
+        position: absolute;
+        height: 140%;
+        width: 100%;
+                    background: green;
+        opacity: 0;
+    }   
+    .btn_360_active {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(active_btn_360.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    .btn_360_inactive {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(inactive_btn_350.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .btn_video_parent {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: 45%;
+        top: 0;
+        bottom: auto;
+    }
+    .btn_video_hit {
+        position: absolute;
+        height: 140%;
+        width: 100%;
+        background: green;
+        opacity: 0;
+    }
+    .btn_video_active {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(active_btns_video.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+    }
+
+    .btn_video_inactive {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(inactive_btn_video.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+
+    .copy_parent {
+        right: auto;
+        top: 80%;
+        left: 3%;
+        position: absolute;
+        height: 20%;
+        width: 94%;
+        bottom: auto;
+    }
+
+    .copy_1 {
+        height: 31%;
+        width: 60%;
+        display: block;
+        position: relative;
+    }
+    .copy_2 {
+        height: 30%;
+        width: 55%;
+        top: auto;
+        display: block;
+        position: relative;
+    }
+
+    .find_out_cta {
+        position: absolute;
+        top: 62%;
+        height: 26%;
+    }
+
+    .logo_top {
+        position: absolute;
+        height: 15%;
+        width: 11%;
+    }
+    .close_btn {
+        position: absolute;
+        height: 12%;
+        width: 60px;
+
+    }
+
+}
+
+@media all and (max-width: 1024px) and (max-height: 650px) {
+    .content_parent {
+        height: 60%;
+    }
+  
+    .video_container_parent {
+        height: 100%;
+        width: 100%;
+        border: 0px;
+    }
+
+}
+
+
+
+
+   
+
+
+
+@media all and (max-width: 640px) {
+
+    .option_2_nav_parent {
+
+        height: 33px;
+        width: 202px;
+    }
+    .close_btn {
+        background-size: 40px;
+    }
+    .video_close {
+
+        height: 10%;
+        width: 20%;
+        background-position: 15px 16px;
+        background-size: 25%;
+
+    }
+    .bottom_left_disclaimer {
+        bottom: 1%;
+        left: 3%;
+    }
+      .video_container_parent {
+        height: 100%;
+        width: 100%;
+        border: 0px;
+    }
+  .logo_top {
+      position: absolute;
+      height: 15%;
+      width: 14%;
+      right: 25px;
+  }
+  
+}
+
+
+@media all and (max-width: 550px) {
+    .content_parent {
+        height: 56%;
+    }
+
+    .bottom_left_disclaimer {
+        width: 30%;
+    }
+
+    .copy_1 {
+        height: 31%;
+        width: 80%;
+    }
+
+    .copy_2 {
+        height: 30%;
+        width: 68%;
+        top: 5%;
+    }
+
+    .find_out_cta {
+        position: absolute;
+        top: 80%;
+        height: 34%;
+    }
+    .video_overlay_parent {
+        display: none;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+    }
+    .video_container_parent {
+        border: 0px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+@media all and (max-width: 640px) and (max-height: 450px) {
+  .video_close {
+    height: 20%;
+    width: 11%;
+    background-position: 15px 16px;
+    background-size: 29%;
+}
+}
+
+
+/*END Full Background*/
+
+/*Remember minimun 60px width and height*/
+
+#ut_close {}
+
+/*Descending Breakpoints (Examples, not mandatory)*/
+
+@media all and (max-height:1000px) and (min-width: 1501px) {}
+
+@media all and (max-height:800px) and (min-width: 1501px) {}
+
+@media all and (max-height:500px) and (min-width: 1501px) {}
+
+
+@media all and (max-width: 1500px) {}
+
+@media all and (max-height:1000px) and (max-width: 1500px) {}
+
+@media all and (max-height:800px) and (max-width: 1500px) {}
+
+@media all and (max-height:500px) and (max-width: 1500px) {}
+
+
+@media all and (max-width: 1024px) {}
+
+@media all and (max-height:1000px) and (max-width: 1024px) {}
+
+@media all and (max-height:800px) and (max-width: 1024px) {}
+
+@media all and (max-height:500px) and (max-width: 1024px) {}
+
+
+@media all and (max-width: 768px) {
+    /*Tablet Breakpoint*/
+}
+
+@media all and (max-height:1000px) and (max-width: 768px) {}
+
+@media all and (max-height:800px) and (max-width: 768px) {}
+
+@media all and (max-height:500px) and (max-width: 768px) {}
+
+
+@media all and (max-width: 600px) {
+    /*Mobile Breakpoint*/
+}
+
+@media all and (max-height:1000px) and (max-width: 600px) {}
+
+@media all and (max-height:800px) and (max-width: 600px) {}
+
+@media all and (max-height:500px) and (max-width: 600px) {}

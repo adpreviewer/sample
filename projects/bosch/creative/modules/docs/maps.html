@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Maps module demo</title>
+  <script id="ut_creativeLib">
+      // This detects whether the browser requires the Zepto or jQuery library
+      document.write('<script src=../../js/' +
+      ('__proto__' in {} ? 'zepto' : 'jquery') +
+      '.min.js><\/script>');
+  </script>
+  <script src="../js/ut.maps.js"></script>
+  <link rel="stylesheet" href="../css/ut.maps.css">
+  <script type="text/javascript" src="../../js/creative.min.js"></script>
+  <script src="run_prettify.js"></script>
+  <style>
+    .map-demo
+    {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <h1>Maps Module</h1>
+    <h2>Basic usage</h2>
+    <p>Include the stylesheet <code class="prettyprint">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;modules/css/ut.maps.css&quot;&gt;</code> and script <code class="prettyprint">&lt;script src=&quot;modules/js/ut.maps.js&quot;&gt;&lt;/script&gt;</code> and pass a DOM element to the <code>maps()</code> function! Make sure that the target element has both height and width, as the map elements inserted into it are positioned absolutely.
+
+    <pre><code class="prettyprint">
+    $(&#39;#map&#39;).maps();
+    </code></pre>
+
+    <div class="map-demo" id="map"></div>
+    <script>
+    $('#map').maps({
+      data: '../../../data/map.json'
+    });
+    </script>
+
+    <!-- open in maps? deep link when possible -->
+
+    <h2>Configuration</h2>
+    <p>You may optionally pass a configuration object as a parameter. These are your options:</p>
+
+    <pre><code class="prettyprint">
+      var defaults = {
+          source: &#39;map&#39;, // relative path to GeoJSON file containing locations. Leave off .json
+          icon: { // markers for locations in GeoJSON file
+              &#39;marker-color&#39;:&#39;7e7e7e&#39;, // fill. stroke is automatically determined
+              &#39;marker-size&#39;: &#39;m&#39;, // s, m, l
+              image: false, // custom image file path
+              size: [30, 70] // how big is the image
+          },
+          userIcon: { // marker for user's location
+              &#39;marker-color&#39;:&#39;dd252e&#39;,
+              &#39;marker-size&#39;: &#39;m&#39;,
+              image: false,
+              size: [30, 70]
+          },
+          cluster: true, // set false to disable marker clustering. This has performance implications.
+          maxZoom: 18,
+          zoom: 16,
+          drawer: {
+              contents: &#39;all&#39;, // outputs all location information by default. See alternate example below
+              initialCss: {&#39;right&#39;: &#39;-200%&#39;}, // off-screen state of drawer overlay
+              animations: { // JavaScript animation to show/hide the drawer where CSS transitions are unsupported
+                  show: {
+                      css: {&#39;right&#39;: &#39;0%&#39;},
+                      duration: 400,
+                      easing: &#39;ease&#39;,
+                      callback: null
+                  },
+                  hide: {
+                      css: {&#39;right&#39;: &#39;-200%&#39;},
+                      duration: 400,
+                      easing: &#39;ease&#39;,
+                      callback: null
+                  }
+              }
+          },
+          geolocate: true, // add control allowing user to opt-in to device location detection when available
+          markerStyleFromData: true, // allow GeoJSON data to contain marker style specifics that will override general configuration
+          maxClusterRadius: 100, // pixels between markers that should be clustered (performance implications)
+          disableClusteringAtZoom: 11 // zoom levels at or below this number will not be clustered (performance implications)
+      };
+    </code></pre>
+
+    <h3>Custom Drawer Example</h3>
+    <p>Given a GeoJSON file full of locations following this pattern:</p>
+
+    <pre><code class="prettyprint">
+    {
+        "geometry":
+        {
+            "coordinates": [-73.9787882, 40.7538638],
+            "type": "Point"
+        },
+        "properties":
+        {
+            "title": "New York",
+            "phone": "212.685.8000",
+            "fax": "212.685.8001",
+            "email": "nyc@undertone.com",
+            "address": "340 Madison Avenue 8th Floor New York, NY 10173"
+        },
+        "type": "Feature"
+    }
+    </code></pre>
+
+    <p>We could let the first 3 properties follow the default pattern by setting them to true, but if we wanted to provide some custom markup around the value for email, we'd set the property to a function whose first parameter is the value, which we'd modify as desired, and return a string containing the markup that will populate the drawer. Leaving properties out of <code>drawer.contents</code>, or setting them to <code>false</code> will cause them to be excluded from the drawer. This example also sets location pins marker-color value to the hex corresponding to Undertone's logo, since this map is showing the locations of Undertone offices. Clicking on a green pin will reveal the drawer containing the information we specified in the config options.
+    </p>
+
+    <pre><code class="prettyprint">
+    $(&#39;#map2&#39;).maps({
+      icon: {&#39;marker-color&#39;:&#39;8EC549&#39;},
+      drawer: {
+        contents: {
+          &#39;title&#39;: true,
+          &#39;phone&#39;: true,
+          &#39;fax&#39;: true,
+          &#39;email&#39;: function (email) {
+            return &#39;&lt;a href=&quot;mailto:&#39; + email + &#39;&quot;&gt;Email&lt;/a&gt;&#39;;
+          }
+        }
+      }
+    });
+    </code></pre>
+
+    <div class="map-demo" id="map2"></div>
+    <script>
+    $('#map2').maps(
+      {
+        data: '../../../data/map.json',
+        icon: {'marker-color':'8EC549'},
+        drawer: {
+          contents: {
+            "title": true,
+            "phone": true,
+            "fax": true,
+            "email": function(email) {
+              return '<a href="mailto:' + email + '">Email</a>';
+            }
+          }
+        }
+      });
+    </script>
+
+
+    <h2>Events</h2>
+    <p>The method will return an object, to which you can bind event listeners. Currently, the only event triggered is 'error' when the attemt to load the location file times out:</p>
+
+    <pre><code class="prettyprint">
+    var map = $(&#39;#map&#39;).maps();
+
+    map.on(&#39;maps-error&#39;, function (e) {
+      console.log(&#39;There was an error: &#39; + e);
+    });
+    </code></pre>
+
+
+  </article>
+</body>
+</html>
