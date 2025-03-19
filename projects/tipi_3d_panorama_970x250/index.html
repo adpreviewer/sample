@@ -1,0 +1,94 @@
+<!-- HTML 5 Ad Template from DoubleClick by Google -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Studio Enabler Required -->
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.1.2_min.js"></script>
+    
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <script language="javascript">
+        //Initialize Enabler
+        if (Enabler.isInitialized()) {
+            init();
+        } else {
+            Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+        }
+        //Run when Enabler is ready
+        function init() {
+            //politeInit();
+            if (Enabler.isPageLoaded()) {
+                politeInit();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+            }
+        }
+    </script>
+
+    <!-- Template Tracker -->
+    <meta data-template-name="Template_DCRM_HTML5_InPage_Dynamic_300x250">
+
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="background_color_container" class="absolute_100"></div>
+
+        <div id="panoramaHolder">
+            <img id="img1" src="" width="1342" height="671">
+            <img id="img2" src="" width="1342" height="671">
+        </div>
+        <div id="loading_screen" class="absolute_100">
+            <div id="loading_gif"></div>
+        </div>
+       
+        <div id="guide"></div>
+        <div id="tipi_logo"></div>
+        
+        <div id="bg_exit" class="absolute_100"></div>
+        
+        <div id="room_selector_btn">
+            <div id="bg_black"></div>
+            <div id="room_1" class="room_icons"></div>
+            <div id="room_2" class="room_icons"></div>
+            <div id="room_3" class="room_icons"></div>
+            <div id="room_4" class="room_icons"></div>
+             <div id="copy_1"></div>
+        </div>
+        
+        <div id="btn_left" class="direction_btn"></div>
+        <div id="btn_right" class="direction_btn"></div>
+        
+       
+        <div id="cta_holder">
+            <div id="cta_text"></div>
+        </div>
+        
+        <div id="imgloader">
+             <img id="imgloader1" src="" width="1" height="1"> 
+             <img id="imgloader2" src="" width="1" height="1"> 
+             <img id="imgloader3" src="" width="1" height="1"> 
+             <img id="imgloader4" src="" width="1" height="1"> 
+        </div>
+    </div>
+    <div id="input_panorama">
+
+      <label for="fname">TOP:</label>
+      <input type="text" id="topPano" name="fname"><br><br>
+      <label for="lname">LEFT:</label>
+      <input type="text" id="leftPano" name="lname"><br><br>
+      <div id="submit_position">Update Position</div>
+
+        
+    </div>
+</body>
+
+</html>
